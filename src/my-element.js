@@ -14,12 +14,10 @@ export class MyElement extends LitElement {
       /**
        * Copy for the read the docs hint.
        */
-      docsHint: { type: String },
-
+      
       /**
        * The number of times the button has been clicked.
        */
-      count: { type: Number },
     }
   }
 
@@ -39,7 +37,7 @@ export class MyElement extends LitElement {
           <img src=${litLogo} class="logo lit" alt="Lit logo" />
         </a>
       </div>
-      <slot></slot>
+     
       <div class="card">
         <button @click=${this._onClick} part="button">
           count is ${this.count}
