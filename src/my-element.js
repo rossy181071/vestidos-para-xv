@@ -1,6 +1,4 @@
 import { LitElement, css, html } from 'lit'
-import litLogo from './assets/lit.svg'
-import viteLogo from '/vite.svg'
 
 /**
  * An example element.
@@ -12,44 +10,150 @@ export class MyElement extends LitElement {
   static get properties() {
     return {
       /**
-       * Copy for the read the docs hint.
+       * Este es el titulo de mi pagina
        */
-      
+      title: { type: String },
       /**
-       * The number of times the button has been clicked.
+       * Este es mi parrafo 
        */
+      paragraph: { type: String },
+      /**
+       * Esta es la url de la imagen 
+       */
+      imageUrl: { type: String },
+      /**
+       * Este es el titulo 1 de mi pagina
+       */
+      title1: { type: String },
+      /**
+       * Este es el parrafo 1
+       */
+      paragraph1: {type: String },
+      /** 
+       *Este es la url de la imagen 1 
+       */
+     image1Url: { type: String },
+     /**
+      * Este es el titulo 2 de mi pagina
+      */
+     title2: { type: String },
+     /**
+      * Este es el parrafo 2 
+      */
+     paragraph2: { type: String },
+     /**
+      * Esta es la url 2
+      */
+     image2Url: { type: String },
+     /**
+      * Este es el titulo 3
+      */
+     title3: { type: String },
+     /**
+      * Este es el parrafo 3
+      */
+     paragraph3: { type: String },
+     /**
+      * Esta es la imagen 3
+      */
+     image3Url: { type: String },
+     /**
+      * Este es titulo 4  
+      */
+     title4: { type: String },
+     /**
+      * Este es el parrafo 4
+      */
+     paragraph4: { type: String },
+     /**
+      * Esta es la imagen 4
+      */
+     image4Url: { type: String },
+     /**
+      * Este es el titulo 5
+      */
+     title5: { type: String },
+     /**
+      * Este es el parrafo 5
+      */
+     paragraph5: { type: String },
+     /**
+      * Esta es la imagen 5
+      */
+     image5Url: { type:String },
+     /**
+      * Este es el titulo 6
+      */
+     title6: { type: String },
+     /**
+      * Este es el parrafo 6 
+      */
+     paragraph6 : { type: String },
+     /**
+      * Esta es la imagen 6
+      */
+     image6Url: { type: String },
     }
   }
 
   constructor() {
     super()
-    this.docsHint = 'Click on the Vite and Lit logos to learn more'
-    this.count = 0
+    
+    this.title = 'VESTIDOS PARA XV'
+    this.paragraph = 'Vestidos y Estilos en Diferentes Colores'
+    this.imageUrl = 'https://www.love21.mx/cdn/shop/files/LV511_P_1024x1024.jpg?v=1693266828'
+    this.title1 = 'BIENVENIDOS A CASA DE MODA LULU'
+    this.paragraph1 = 'Ofrecemos Bonitos y de buena calidad Vestidos para esas hermosas XVeras'
+    this.image1Url = 'https://www.love21.mx/cdn/shop/files/LV511_P_1024x1024.jpg?v=1693266828'
+    this.title2 = 'Vestidos y estilos en diferentes colores'
+    this.paragraph2 = 'Vestidos Rosa con brillitos'
+    this.image2Url = 'https://i.ytimg.com/vi/wG0ELySsE80/maxresdefault.jpg'
+    this.title3 = 'Vestidos, Azul-Verdes largos'
+    this.paragraph3 =  'Vestidos con Olanes y largos Elegantes'
+    this.image3Url = 'https://cdn0.bodas.net/article-dress/6753/original/1280/jpg/m633576.jpeg'
+    this.title4 = 'Vestidos en color obscuro con tiara'
+    this.paragraph4 = 'Vestidos en color negro, azul largos y ampones'
+    this.image4Url = 'https://vestidosde15anos.net/wp-content/uploads/2011/03/Vestido-de-15-azul-y-negro.-340x500.jpg'
+    this.title5 = 'Vestidos con mo;os en varios colores'
+    this.paragraph5 = 'Vestidos con mo;os en cintura y cola'
+    this.image5Url = 'https://http2.mlstatic.com/D_NQ_NP_691394-MLM73152627976_122023-O.webp'
+    this.title6 = 'Vestidos en color bitono'
+    this.paragraph6 = 'Vestidos en Rosa y blanco'
+    this.image6Url = 'https://i.pinimg.com/736x/fc/da/ba/fcdabac5af81bd84a86d8beedbaf914e.jpg'
+
   }
 
   render() {
     return html`
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
-        </a>
-      </div>
-     
-      <div class="card">
-        <button @click=${this._onClick} part="button">
-          count is ${this.count}
-        </button>
-      </div>
-      <p class="read-the-docs">${this.docsHint}</p>
-    `
+      <div id="VESTIDOS PARA XV">
+        <h1>${this.title}</h1>
+        <p>${this.paragraph}</p>
+        <img src="${this.imageUrl}">
+        <h2>${this.title1}</h2>
+        <p>${this.paragraph1}</p>
+        <img src="${this.image1Url}">
+        <h3>${this.title2}</h2>
+        <p>${this.paragraph2}</p>
+        <img src="${this.image2Url}">
+        <h4>${this.title3}</h4>
+        <p>${this.paragraph3}</p>
+        <img src="${this.image3Url}">
+        <h5>${this.title4}</h5>
+        <p>${this.paragraph4}</p>
+        <img src="${this.image4Url}">
+        <h6>${this.title5}</h6>
+        <p>${this.paragraph5}</p>
+        <img src="${this.image5Url}">
+        <h7>${this.title6}</h7>
+        <p>${this.paragraph6}</p>
+        <img src="${this.image6Url}">
+      
+      </div>`
+
+
   }
 
-  _onClick() {
-    this.count++
-  }
+  
 
   static get styles() {
     return css`
@@ -60,68 +164,60 @@ export class MyElement extends LitElement {
         text-align: center;
       }
 
-      .logo {
-        height: 6em;
-        padding: 1.5em;
-        will-change: filter;
-        transition: filter 300ms;
+      body{
+        background-color: plum;
       }
-      .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
+      #parrafo {
+        background-color: chartreuse;
       }
-      .logo.lit:hover {
-        filter: drop-shadow(0 0 2em #325cffaa);
+      #parrafo {
+        font-family: Georgia
       }
-
-      .card {
-        padding: 2em;
+      #parrafo { 
+        color: rgb(165, 42, 144);
       }
-
-      .read-the-docs {
-        color: #888;
+      #vestidos-para-xv {
+        background-color: rgb(187, 109, 109);
+        font-family: Times;
+        color: blue;
       }
-
-      a {
-        font-weight: 500;
-        color: #646cff;
-        text-decoration: inherit;
+      
+      div{
+    padding: 15vw;
+    }
+    #vestidos-para-xv {
+      background-color: cadetblue;
+    }
+      img {
+    width:25vw;
       }
-      a:hover {
-        color: #535bf2;
-      }
-
-      ::slotted(h1) {
-        font-size: 3.2em;
-        line-height: 1.1;
+      p {
+    font-size:10vh;
       }
 
-      button {
-        border-radius: 8px;
-        border: 1px solid transparent;
-        padding: 0.6em 1.2em;
-        font-size: 1em;
-        font-weight: 500;
-        font-family: inherit;
-        background-color: #1a1a1a;
-        cursor: pointer;
-        transition: border-color 0.25s;
-      }
-      button:hover {
-        border-color: #646cff;
-      }
-      button:focus,
-      button:focus-visible {
-        outline: 4px auto -webkit-focus-ring-color;
-      }
+    #titulo-1 {
+      color: coral;
+    }
+    #titulo-2 {
+      color: aqua;
+    }
+    #titulo-3 {
+      color: chartreuse;
+    }
+    #titulo-4 {
+      color: brown;
+    }
+    #titulo-5 {
+      color: darkgreen;
+    }
+    #titulo-6 {
+      color: darkorchid;
+    }
+    li{
+    font-size: 7vw;
 
-      @media (prefers-color-scheme: light) {
-        a:hover {
-          color: #747bff;
-        }
-        button {
-          background-color: #f9f9f9;
-        }
-      }
+      
+    }
     `
   }
 }
